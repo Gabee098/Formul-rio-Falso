@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulário</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #e9ecef;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #222;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      color: #444;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 18px;
+      border: 1px solid #bbb;
+      border-radius: 6px;
+      font-size: 15px;
+      transition: border 0.2s;
+    }
+    input:focus {
+      border-color: #555;
+      outline: none;
+    }
+    button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      background: #333;
+      color: white;
+      border-radius: 6px;
+      font-size: 17px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.1s;
+    }
+    button:hover {
+      background: #111;
+    }
+    button:active {
+      transform: scale(0.97);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Formulário de Cadastro</h2>
+    <form onsubmit="window.location.href='aviso.html'; return false;">
+      <label for="nome">Nome Completo</label>
+      <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required />
+
+      <label for="telefone">Telefone Mais Atual</label>
+      <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required />
+
+      <label for="cpf">CPF</label>
+      <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required />
+
+      <label for="endereco">Endereço</label>
+      <input type="text" id="endereco" name="endereco" placeholder="Digite seu endereço" required />
+
+      <label for="rg">Número do RG</label>
+      <input type="text" id="rg" name="rg" placeholder="00.000.000-0" required />
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</body>
+</html>
